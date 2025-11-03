@@ -60,7 +60,7 @@ public class FlockSimulation {
 
         for (Boid boid : boids) {
             List<Boid> neighbors = spatialIndex.findNeighbors(boid, neighborRadius);
-            boid.update(neighbors, width, height);
+            boid.update(null, neighbors, width, height);
         }
         
         long endTime = System.nanoTime();
